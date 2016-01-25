@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+<style type="text/css">
+.highlight  { background: #ffffff; }
+.highlight .c { color: #999988; font-style: italic } /* Comment */
+.highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
+.highlight .k { font-weight: bold } /* Keyword */
+.highlight .o { font-weight: bold } /* Operator */
+.highlight .cm { color: #999988; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #999999; font-weight: bold } /* Comment.Preproc */
+.highlight .c1 { color: #999988; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #999999; font-weight: bold; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #000000; background-color: #ffdddd } /* Generic.Deleted */
+.highlight .gd .x { color: #000000; background-color: #ffaaaa } /* Generic.Deleted.Specific */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #aa0000 } /* Generic.Error */
+.highlight .gh { color: #999999 } /* Generic.Heading */
+.highlight .gi { color: #000000; background-color: #ddffdd } /* Generic.Inserted */
+.highlight .gi .x { color: #000000; background-color: #aaffaa } /* Generic.Inserted.Specific */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #555555 } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #aaaaaa } /* Generic.Subheading */
+.highlight .gt { color: #aa0000 } /* Generic.Traceback */
+.highlight .kc { font-weight: bold } /* Keyword.Constant */
+.highlight .kd { font-weight: bold } /* Keyword.Declaration */
+.highlight .kp { font-weight: bold } /* Keyword.Pseudo */
+.highlight .kr { font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #445588; font-weight: bold } /* Keyword.Type */
+.highlight .m { color: #009999 } /* Literal.Number */
+.highlight .s { color: #d14 } /* Literal.String */
+.highlight .na { color: #008080 } /* Name.Attribute */
+.highlight .nb { color: #0086B3 } /* Name.Builtin */
+.highlight .nc { color: #445588; font-weight: bold } /* Name.Class */
+.highlight .no { color: #008080 } /* Name.Constant */
+.highlight .ni { color: #800080 } /* Name.Entity */
+.highlight .ne { color: #990000; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #990000; font-weight: bold } /* Name.Function */
+.highlight .nn { color: #555555 } /* Name.Namespace */
+.highlight .nt { color: #000080 } /* Name.Tag */
+.highlight .nv { color: #008080 } /* Name.Variable */
+.highlight .ow { font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mf { color: #009999 } /* Literal.Number.Float */
+.highlight .mh { color: #009999 } /* Literal.Number.Hex */
+.highlight .mi { color: #009999 } /* Literal.Number.Integer */
+.highlight .mo { color: #009999 } /* Literal.Number.Oct */
+.highlight .sb { color: #d14 } /* Literal.String.Backtick */
+.highlight .sc { color: #d14 } /* Literal.String.Char */
+.highlight .sd { color: #d14 } /* Literal.String.Doc */
+.highlight .s2 { color: #d14 } /* Literal.String.Double */
+.highlight .se { color: #d14 } /* Literal.String.Escape */
+.highlight .sh { color: #d14 } /* Literal.String.Heredoc */
+.highlight .si { color: #d14 } /* Literal.String.Interpol */
+.highlight .sx { color: #d14 } /* Literal.String.Other */
+.highlight .sr { color: #009926 } /* Literal.String.Regex */
+.highlight .s1 { color: #d14 } /* Literal.String.Single */
+.highlight .ss { color: #990073 } /* Literal.String.Symbol */
+.highlight .bp { color: #999999 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #008080 } /* Name.Variable.Class */
+.highlight .vg { color: #008080 } /* Name.Variable.Global */
+.highlight .vi { color: #008080 } /* Name.Variable.Instance */
+.highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
+.pl-c {
+    color: #969896;
+}
+
+.pl-c1,.pl-mdh,.pl-mm,.pl-mp,.pl-mr,.pl-s1 .pl-v,.pl-s3,.pl-sc,.pl-sv {
+    color: #0086b3;
+}
+
+.pl-e,.pl-en {
+    color: #795da3;
+}
+
+.pl-s1 .pl-s2,.pl-smi,.pl-smp,.pl-stj,.pl-vo,.pl-vpf {
+    color: #333;
+}
+
+.pl-ent {
+    color: #63a35c;
+}
+
+.pl-k,.pl-s,.pl-st {
+    color: #a71d5d;
+}
+
+.pl-pds,.pl-s1,.pl-s1 .pl-pse .pl-s2,.pl-sr,.pl-sr .pl-cce,.pl-sr .pl-sra,.pl-sr .pl-sre,.pl-src,.pl-v {
+    color: #df5000;
+}
+
+.pl-id {
+    color: #b52a1d;
+}
+
+.pl-ii {
+    background-color: #b52a1d;
+    color: #f8f8f8;
+}
+
+.pl-sr .pl-cce {
+    color: #63a35c;
+    font-weight: bold;
+}
+
+.pl-ml {
+    color: #693a17;
+}
+
+.pl-mh,.pl-mh .pl-en,.pl-ms {
+    color: #1d3e81;
+    font-weight: bold;
+}
+
+.pl-mq {
+    color: #008080;
+}
+
+.pl-mi {
+    color: #333;
+    font-style: italic;
+}
+
+.pl-mb {
+    color: #333;
+    font-weight: bold;
+}
+
+.pl-md,.pl-mdhf {
+    background-color: #ffecec;
+    color: #bd2c00;
+}
+
+.pl-mdht,.pl-mi1 {
+    background-color: #eaffea;
+    color: #55a532;
+}
+
+.pl-mdr {
+    color: #795da3;
+    font-weight: bold;
+}
+
+.pl-mo {
+    color: #1d3e81;
+}
+.task-list {
+padding-left:10px;
+margin-bottom:0;
+}
+
+.task-list li {
+    margin-left: 20px;
+}
+
+.task-list-item {
+list-style-type:none;
+padding-left:10px;
+}
+
+.task-list-item label {
+font-weight:400;
+}
+
+.task-list-item.enabled label {
+cursor:pointer;
+}
+
+.task-list-item+.task-list-item {
+margin-top:3px;
+}
+
+.task-list-item-checkbox {
+display:inline-block;
+margin-left:-20px;
+margin-right:3px;
+vertical-align:1px;
+}
+</style>
+</head>
+<body>
+<h1>fullPage.js</h1>
+
+<p><a href="https://camo.githubusercontent.com/0a9ce533243ea122eb9fba3f93efb5426cc8b6e1/68747470733a2f2f7261772e6769746875622e636f6d2f616c7661726f747269676f2f66756c6c506167652e6a732f6d61737465722f6578616d706c65732f696d67732f696e74726f2e706e67" target="_blank"><img src="https://camo.githubusercontent.com/0a9ce533243ea122eb9fba3f93efb5426cc8b6e1/68747470733a2f2f7261772e6769746875622e636f6d2f616c7661726f747269676f2f66756c6c506167652e6a732f6d61737465722f6578616d706c65732f696d67732f696e74726f2e706e67" alt="preview" data-canonical-src="https://raw.github.com/alvarotrigo/fullPage.js/master/examples/imgs/intro.png" style="max-width:100%;"></a><br>
+<a href="https://camo.githubusercontent.com/f0ddbb02149953cd070a093a5eb744a84d9a27b3/68747470733a2f2f7261772e6769746875622e636f6d2f616c7661726f747269676f2f66756c6c506167652e6a732f6d61737465722f6578616d706c65732f696d67732f636f6d70617469626c652e676966" target="_blank"><img src="https://camo.githubusercontent.com/f0ddbb02149953cd070a093a5eb744a84d9a27b3/68747470733a2f2f7261772e6769746875622e636f6d2f616c7661726f747269676f2f66756c6c506167652e6a732f6d61737465722f6578616d706c65732f696d67732f636f6d70617469626c652e676966" alt="compatibility" data-canonical-src="https://raw.github.com/alvarotrigo/fullPage.js/master/examples/imgs/compatible.gif" style="max-width:100%;"></a></p>
+
+<p><a href="https://camo.githubusercontent.com/f3e1adedc774f6aa7978a183f13843758c9d2b6e/687474703a2f2f696d672e736869656c64732e696f2f62616467652f66756c6c506167652e6a732d76322e372e362d627269676874677265656e2e737667" target="_blank"><img src="https://camo.githubusercontent.com/f3e1adedc774f6aa7978a183f13843758c9d2b6e/687474703a2f2f696d672e736869656c64732e696f2f62616467652f66756c6c506167652e6a732d76322e372e362d627269676874677265656e2e737667" alt="fullPage.js version" data-canonical-src="http://img.shields.io/badge/fullPage.js-v2.7.6-brightgreen.svg" style="max-width:100%;"></a><br>
+<a href="http://opensource.org/licenses/MIT"><img src="https://camo.githubusercontent.com/576f25c78e59902f0c6ccfff81f0448ef660e90d/687474703a2f2f696d672e736869656c64732e696f2f62616467652f4c6963656e73652d4d49542d626c75652e737667" alt="License" data-canonical-src="http://img.shields.io/badge/License-MIT-blue.svg" style="max-width:100%;"></a><br>
+7Kb gziped!</p>
+
+<hr>
+
+<p><strong>Make sure to use the latest version 2.7.6.</strong> A dangerous security issue has been found in previous versions!</p>
+
+<hr>
+
+<p>A simple and easy to use plugin to create fullscreen scrolling websites (also known as single page websites or onepage sites).<br>
+It allows the creation of fullscreen scrolling websites, as well as adding some landscape sliders inside the sections of the site.</p>
+
+<ul>
+<li><a href="http://alvarotrigo.com/fullPage/">Live demo</a></li>
+<li><a href="https://goo.gl/HuFudq">Wordpress theme</a></li>
+<li><a href="http://alvarotrigo.com/blog/fullpage-jquery-plugin-for-fullscreen-scrolling-websites/">Blog Article</a></li>
+<li><a href="https://github.com/alvarotrigo/fullPage.js/wiki/FAQ---Frequently-Answered-Questions">Frequently Answered Questions</a></li>
+</ul>
+
+<p>Invite me to a coffee<br>
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=BEK5JQCQMED4J&amp;lc=GB&amp;item_name=fullPage%2ejs&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"><img src="https://camo.githubusercontent.com/24ae43518013d5c9306ddadbbc2fdea234d3522c/68747470733a2f2f7777772e70617970616c6f626a656374732e636f6d2f656e5f55532f47422f692f62746e2f62746e5f646f6e61746543435f4c472e676966" alt="Donate" data-canonical-src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif" style="max-width:100%;"></a></p>
+
+<p>Customizations of the plugin and urgent changes are available upon request for some reasonable price. <a href="http://alvarotrigo.com/#contact-page">Contact me</a>.</p>
+
+<p>Would you like to have a website using fullpage.js functionality but you don't know how to use it? I can do it for you for a reasonable price. <a href="http://alvarotrigo.com/#contact-page">Contact me</a>.</p>
+
+<ul>
+<li><a href="https://github.com/alvarotrigo/fullPage.js#introduction">Introduction</a></li>
+<li><a href="https://github.com/alvarotrigo/fullPage.js#compatibility">Compatibility</a></li>
+<li><a href="https://github.com/alvarotrigo/fullPage.js#usage">Usage</a></li>
+<li><a href="https://github.com/alvarotrigo/fullPage.js#options">Options</a></li>
+<li><a href="https://github.com/alvarotrigo/fullPage.js#methods">Methods</a></li>
+<li><a href="https://github.com/alvarotrigo/fullPage.js#lazy-loading">Lazy loading</a></li>
+<li><a href="https://github.com/alvarotrigo/fullPage.js#creating-smaller-sections">Creating smaller sections</a></li>
+<li><a href="https://github.com/alvarotrigo/fullPage.js#callbacks">Callbacks</a></li>
+<li><a href="https://github.com/alvarotrigo/fullPage.js#build-tasks">Build tasks</a></li>
+<li><a href="https://github.com/alvarotrigo/fullPage.js#resources">Resources</a></li>
+<li><a href="https://github.com/alvarotrigo/fullPage.js#who-is-using-fullpagejs">Who is using fullpage.js</a></li>
+</ul>
+
+<h2>Introduction</h2>
+
+<p>Suggestion are more than welcome, not only for feature requests but also for coding style improvements.<br>
+Let's make this a great plugin to make people's lives easier!</p>
+
+<h2>Compatibility</h2>
+
+<p>fullPage.js is fully functional on all modern browsers, as well as some old ones such as Internet Explorer 8, 9, Opera 12, etc.<br>
+It works with browsers with CSS3 support and with the ones which don't have it, making it ideal for old browsers compatibility.<br>
+It also provides touch support for mobile phones, tablets and touch screen computers.</p>
+
+<p><a href="http://www.browserstack.com/"><img src="https://camo.githubusercontent.com/7e4b5eca162142e4339705f2ff751a44dd2b3e08/687474703a2f2f77616c6c7061706572732d666f722d697061642e636f6d2f66756c6c706167652f696d6773332f6c6f676f732f62726f77736572737461636b2e706e67" alt="Browserstack" data-canonical-src="http://wallpapers-for-ipad.com/fullpage/imgs3/logos/browserstack.png" style="max-width:100%;"></a></p>
+
+<p>Special thanks to <a href="http://www.browserstack.com/">Browserstack</a> for supporting fullpage.js.</p>
+
+<h2>Usage</h2>
+
+<p>As you can see in the example files, you will need to include:</p>
+
+<ul>
+<li>
+<a href="http://jquery.com/">jQuery library</a>. (1.6.0 minimum)</li>
+<li>The JavaScript file <code>jquery.fullPage.js</code> (or its minified version <code>jquery.fullPage.min.js</code>)</li>
+<li>
+<p>The css file <code>jquery.fullPage.css</code></p>
+
+<p><strong>Optionally</strong>, you can add the <a href="http://jqueryui.com/">jQuery UI library</a> in case you want to use other easing effects apart from the ones included in the jQuery library (<code>linear</code>, <code>swing</code> and <code>easeInOutCubic</code>) or the one included by default in fullPage.js (<code>easeInQuart</code>).</p>
+</li>
+</ul>
+
+<h3>Install using bower or npm</h3>
+
+<p><strong>Optionally</strong>, you can install fullPage.js with bower or npm if you prefer:</p>
+
+<p>Terminal:</p>
+
+<div class="highlight highlight-source-shell"><pre>// With bower
+bower install fullpage.js
+
+// With npm
+npm install fullpage.js</pre></div>
+
+<p>###Including files:</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/css<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>jquery.fullPage.css<span class="pl-pds">"</span></span> /&gt;
+
+&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+
+<span class="pl-c">&lt;!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "linear", "swing" or "easeInOutCubic". --&gt;</span>
+&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>vendors/jquery.easings.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+
+
+<span class="pl-c">&lt;!-- This following line is only necessary in the case of using the plugin option `scrollOverflow:true` --&gt;</span>
+&lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>vendors/jquery.slimscroll.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+
+&lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>jquery.fullPage.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+
+<p>###Optional use of CDN<br>
+If you prefer to use a CDN to load the needed files, fullPage.js is in CDNJS:<br>
+<a href="https://cdnjs.com/libraries/fullPage.js">https://cdnjs.com/libraries/fullPage.js</a></p>
+
+<p>###Required HTML structure<br>
+Each section will be defined with an element containing the <code>section</code> class.<br>
+The active section by default will be the first section, which is taken as the home page.</p>
+
+<p>Sections should be placed inside a wrapper (<code>&lt;div id="fullpage"&gt;</code> in this case). The wrapper can not be the <code>body</code> element.</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>fullpage<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>section<span class="pl-pds">"</span></span>&gt;Some section&lt;/<span class="pl-ent">div</span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>section<span class="pl-pds">"</span></span>&gt;Some section&lt;/<span class="pl-ent">div</span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>section<span class="pl-pds">"</span></span>&gt;Some section&lt;/<span class="pl-ent">div</span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>section<span class="pl-pds">"</span></span>&gt;Some section&lt;/<span class="pl-ent">div</span>&gt;
+&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+
+<p>If you want to define a different starting point rather than the first section or the first slide of a section, just add the class <code>active</code> to the section and slide you want to load first.</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>section active<span class="pl-pds">"</span></span>&gt;Some section&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+
+<p>In order to create a landscape slider within a section, each slide will be defined by default with an element containing the <code>slide</code> class:</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>section<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>slide<span class="pl-pds">"</span></span>&gt; Slide 1 &lt;/<span class="pl-ent">div</span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>slide<span class="pl-pds">"</span></span>&gt; Slide 2 &lt;/<span class="pl-ent">div</span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>slide<span class="pl-pds">"</span></span>&gt; Slide 3 &lt;/<span class="pl-ent">div</span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>slide<span class="pl-pds">"</span></span>&gt; Slide 4 &lt;/<span class="pl-ent">div</span>&gt;
+&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+
+<p>You can see a fully working example of the HTML structure in the <a href="https://github.com/alvarotrigo/fullPage.js/blob/master/examples/demoPage.html"><code>demoPage.html</code> file</a>.</p>
+
+<p>###Initialization<br>
+All you need to do is call the plugin inside a <code>$(document).ready</code> function:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-en">$</span>(<span class="pl-c1">document</span>).<span class="pl-en">ready</span>(<span class="pl-k">function</span>() {
+    <span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">'</span>#fullpage<span class="pl-pds">'</span></span>).<span class="pl-en">fullpage</span>();
+});</pre></div>
+
+<p>A more complex initialization with all options set could look like this:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-en">$</span>(<span class="pl-c1">document</span>).<span class="pl-en">ready</span>(<span class="pl-k">function</span>() {
+    <span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">'</span>#fullpage<span class="pl-pds">'</span></span>).<span class="pl-en">fullpage</span>({
+        <span class="pl-c">//Navigation</span>
+        menu<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>#menu<span class="pl-pds">'</span></span>,
+        lockAnchors<span class="pl-k">:</span> <span class="pl-c1">false</span>,
+        anchors<span class="pl-k">:</span>[<span class="pl-s"><span class="pl-pds">'</span>firstPage<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>secondPage<span class="pl-pds">'</span></span>],
+        navigation<span class="pl-k">:</span> <span class="pl-c1">false</span>,
+        navigationPosition<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>right<span class="pl-pds">'</span></span>,
+        navigationTooltips<span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">'</span>firstSlide<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>secondSlide<span class="pl-pds">'</span></span>],
+        showActiveTooltip<span class="pl-k">:</span> <span class="pl-c1">false</span>,
+        slidesNavigation<span class="pl-k">:</span> <span class="pl-c1">true</span>,
+        slidesNavPosition<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>bottom<span class="pl-pds">'</span></span>,
+
+        <span class="pl-c">//Scrolling</span>
+        css3<span class="pl-k">:</span> <span class="pl-c1">true</span>,
+        scrollingSpeed<span class="pl-k">:</span> <span class="pl-c1">700</span>,
+        autoScrolling<span class="pl-k">:</span> <span class="pl-c1">true</span>,
+        fitToSection<span class="pl-k">:</span> <span class="pl-c1">true</span>,
+        fitToSectionDelay<span class="pl-k">:</span> <span class="pl-c1">1000</span>,
+        scrollBar<span class="pl-k">:</span> <span class="pl-c1">false</span>,
+        easing<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>easeInOutCubic<span class="pl-pds">'</span></span>,
+        easingcss3<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>ease<span class="pl-pds">'</span></span>,
+        loopBottom<span class="pl-k">:</span> <span class="pl-c1">false</span>,
+        loopTop<span class="pl-k">:</span> <span class="pl-c1">false</span>,
+        loopHorizontal<span class="pl-k">:</span> <span class="pl-c1">true</span>,
+        continuousVertical<span class="pl-k">:</span> <span class="pl-c1">false</span>,
+        normalScrollElements<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>#element1, .element2<span class="pl-pds">'</span></span>,
+        scrollOverflow<span class="pl-k">:</span> <span class="pl-c1">false</span>,
+        touchSensitivity<span class="pl-k">:</span> <span class="pl-c1">15</span>,
+        normalScrollElementTouchThreshold<span class="pl-k">:</span> <span class="pl-c1">5</span>,
+
+        <span class="pl-c">//Accessibility</span>
+        keyboardScrolling<span class="pl-k">:</span> <span class="pl-c1">true</span>,
+        animateAnchor<span class="pl-k">:</span> <span class="pl-c1">true</span>,
+        recordHistory<span class="pl-k">:</span> <span class="pl-c1">true</span>,
+
+        <span class="pl-c">//Design</span>
+        controlArrows<span class="pl-k">:</span> <span class="pl-c1">true</span>,
+        verticalCentered<span class="pl-k">:</span> <span class="pl-c1">true</span>,
+        resize <span class="pl-k">:</span> <span class="pl-c1">false</span>,
+        sectionsColor <span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">'</span>#ccc<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>#fff<span class="pl-pds">'</span></span>],
+        paddingTop<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>3em<span class="pl-pds">'</span></span>,
+        paddingBottom<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>10px<span class="pl-pds">'</span></span>,
+        fixedElements<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>#header, .footer<span class="pl-pds">'</span></span>,
+        responsiveWidth<span class="pl-k">:</span> <span class="pl-c1">0</span>,
+        responsiveHeight<span class="pl-k">:</span> <span class="pl-c1">0</span>,
+
+        <span class="pl-c">//Custom selectors</span>
+        sectionSelector<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>.section<span class="pl-pds">'</span></span>,
+        slideSelector<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>.slide<span class="pl-pds">'</span></span>,
+
+        <span class="pl-c">//events</span>
+        <span class="pl-en">onLeave</span><span class="pl-k">:</span> <span class="pl-k">function</span>(<span class="pl-smi">index</span>, <span class="pl-smi">nextIndex</span>, <span class="pl-smi">direction</span>){},
+        <span class="pl-en">afterLoad</span><span class="pl-k">:</span> <span class="pl-k">function</span>(<span class="pl-smi">anchorLink</span>, <span class="pl-smi">index</span>){},
+        <span class="pl-en">afterRender</span><span class="pl-k">:</span> <span class="pl-k">function</span>(){},
+        <span class="pl-en">afterResize</span><span class="pl-k">:</span> <span class="pl-k">function</span>(){},
+        <span class="pl-en">afterSlideLoad</span><span class="pl-k">:</span> <span class="pl-k">function</span>(<span class="pl-smi">anchorLink</span>, <span class="pl-smi">index</span>, <span class="pl-smi">slideAnchor</span>, <span class="pl-smi">slideIndex</span>){},
+        <span class="pl-en">onSlideLeave</span><span class="pl-k">:</span> <span class="pl-k">function</span>(<span class="pl-smi">anchorLink</span>, <span class="pl-smi">index</span>, <span class="pl-smi">slideIndex</span>, <span class="pl-smi">direction</span>, <span class="pl-smi">nextSlideIndex</span>){}
+    });
+});</pre></div>
+
+<h3>Creating links to sections or slides</h3>
+
+<p>If you are using fullPage.js with anchor links for the sections (using the <code>anchors</code> option or the attribute <code>data-anchor</code> in each section), then you will be able to use anchor links also to navigate directly to a certain slide inside a section.</p>
+
+<p>This would be an example of a link with an anchor: <a href="http://alvarotrigo.com/fullPage/#secondPage/2">http://alvarotrigo.com/fullPage/#secondPage/2</a> (which is the URL you will see once you access to that section/slide manually)<br>
+Notice the last part of the URL ends in <code>#secondPage/2</code>.</p>
+
+<p>Having the following initialization:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-en">$</span>(<span class="pl-c1">document</span>).<span class="pl-en">ready</span>(<span class="pl-k">function</span>() {
+    <span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">'</span>#fullpage<span class="pl-pds">'</span></span>).<span class="pl-en">fullpage</span>({
+        anchors<span class="pl-k">:</span>[<span class="pl-s"><span class="pl-pds">'</span>firstPage<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>secondPage<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>thirdPage<span class="pl-pds">'</span></span>]
+    });
+});</pre></div>
+
+<p>The anchor at the end of the URL <code>#secondPage/2</code> defines the section and slide of destination respectively. In the previous URL, the section of destination will be the one defined with the anchor <code>secondPage</code> and the slide will be the 2nd slide, as we are using the index <code>2</code> for it. (the fist slide of a section has index 0, as technically it is a section).</p>
+
+<p>We could have used a custom anchor for the slide instead of its index if we would have used the attribute <code>data-anchor</code> on the HTML markup like so:</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>section<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>slide<span class="pl-pds">"</span></span> <span class="pl-e">data-anchor</span>=<span class="pl-s"><span class="pl-pds">"</span>slide1<span class="pl-pds">"</span></span>&gt; Slide 1 &lt;/<span class="pl-ent">div</span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>slide<span class="pl-pds">"</span></span> <span class="pl-e">data-anchor</span>=<span class="pl-s"><span class="pl-pds">"</span>slide2<span class="pl-pds">"</span></span>&gt; Slide 2 &lt;/<span class="pl-ent">div</span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>slide<span class="pl-pds">"</span></span> <span class="pl-e">data-anchor</span>=<span class="pl-s"><span class="pl-pds">"</span>slide3<span class="pl-pds">"</span></span>&gt; Slide 3 &lt;/<span class="pl-ent">div</span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>slide<span class="pl-pds">"</span></span> <span class="pl-e">data-anchor</span>=<span class="pl-s"><span class="pl-pds">"</span>slide4<span class="pl-pds">"</span></span>&gt; Slide 4 &lt;/<span class="pl-ent">div</span>&gt;
+&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+
+<p>In this last case, the URL we would use would be <code>#secondPage/slide3</code>, which is the equivalent to our previous <code>#secondPage/2</code>.</p>
+
+<p>Note that section anchors can also be defined in the same way, by using the <code>data-anchor</code> attribute, if no <code>anchors</code> array is provided.</p>
+
+<p><strong>Be careful!</strong> <code>data-anchor</code> tags can not have the same value as any ID element on the site (or NAME element for IE).</p>
+
+<h3>Creating smaller sections</h3>
+
+<p>It is possible to use sections or slides which don't take the whole viewport height resulting in smaller sections. This is ideal for footers.<br>
+It is important to realise that it doesn't make sense to have all of your sections using this feature. If there is more than one section in the initial load of the site, the plugin won't scroll at all to see the next one as it will be already in the viewport.</p>
+
+<p>To create smaller sections just use the class <code>fp-auto-height</code> in the section you want to apply it. It will then take the height defined by your section/slide content.</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>section<span class="pl-pds">"</span></span>&gt;Whole viewport&lt;/<span class="pl-ent">div</span>&gt;
+&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>section fp-auto-height<span class="pl-pds">"</span></span>&gt;Auto height&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+
+<h2>Options</h2>
+
+<ul>
+<li><p><code>controlArrows</code>: (default <code>true</code>) Determines whether to use control arrows for the slides to move right or left.</p></li>
+<li><p><code>verticalCentered</code>: (default <code>true</code>) Vertically centering of the content within sections. When set to <code>true</code>, your content will be wrapped by the plugin. Consider using delegation or load your other scripts in the <code>afterRender</code> callback.</p></li>
+<li><p><code>resize</code>: (default <code>false</code>) Whether you want to resize the text when the window is resized.</p></li>
+<li><p><code>scrollingSpeed</code>: (default <code>700</code>) Speed in milliseconds for the scrolling transitions.</p></li>
+<li><p><code>sectionsColor</code>:(default <code>none</code>) Define the CSS <code>background-color</code> property for each section:<br>
+Example:</p></li>
+</ul>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">'</span>#fullpage<span class="pl-pds">'</span></span>).<span class="pl-en">fullpage</span>({
+    sectionsColor<span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">'</span>#f2f2f2<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>#4BBFC3<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>#7BAABE<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>whitesmoke<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>#000<span class="pl-pds">'</span></span>],
+});</pre></div>
+
+<ul>
+<li><p><code>anchors</code>: (default <code>[]</code>) Defines the anchor links (#example) to be shown on the URL for each section. Anchors value should be unique. The position of the anchors in the array will define to which sections the anchor is applied. (second position for second section and so on). Using anchors forward and backward navigation will also be possible through the browser. This option also allows users to bookmark a specific section or slide. <strong>Be careful!</strong> anchors can not have the same value as any ID element on the site (or NAME element for IE).<br>
+Now anchors can be defined directly in the HTML structure by using the attribute <code>data-anchor</code> as explained here.</p></li>
+<li><p><code>lockAnchors</code>: (default <code>false</code>). Determines whether anchors in the URL will have any effect at all in the plugin. You can still using anchors internally for your own functions and callbacks, but they won't have any effect in the scrolling of the site. Useful if you want to combine fullPage.js with other plugins using anchor in the URL.</p></li>
+</ul>
+
+<p><strong>Important</strong> It is helpful to understand that the values in the <code>anchors</code> option array correlate directly to the element with the class of <code>.section</code> by it's position in the markup.</p>
+
+<ul>
+<li><p><code>easing</code>: (default <code>easeInOutCubic</code>) Defines the transition effect to use for the vertical and horizontal scrolling.<br>
+It requires the file <code>vendors/jquery.easings.min.js</code> or <a href="http://jqueryui.com/">jQuery UI</a> for using some of <a href="http://api.jqueryui.com/easings/">its transitions</a>. Other libraries could be used instead.</p></li>
+<li><p><code>easingcss3</code>: (default <code>ease</code>) Defines the transition effect to use in case of using <code>css3:true</code>. You can use the <a href="http://www.w3schools.com/cssref/css3_pr_transition-timing-function.asp">pre-defined ones</a> (such as <code>linear</code>, <code>ease-out</code>...) or create your own ones using the <code>cubic-bezier</code> function. You might want to use <a href="http://matthewlein.com/ceaser/">Matthew Lein CSS Easing Animation Tool</a> for it.</p></li>
+<li><p><code>loopTop</code>: (default <code>false</code>) Defines whether scrolling up in the first section should scroll to the last one or not.</p></li>
+<li><p><code>loopBottom</code>: (default <code>false</code>) Defines whether scrolling down in the last section should scroll to the first one or not.</p></li>
+<li><p><code>loopHorizontal</code>: (default <code>true</code>) Defines whether horizontal sliders will loop after reaching the last or previous slide or not.</p></li>
+<li><p><code>css3</code>: (default <code>true</code>). Defines whether to use JavaScript or CSS3 transforms to scroll within sections and slides. Useful to speed up the movement in tablet and mobile devices with browsers supporting CSS3. If this option is set to <code>true</code> and the browser doesn't support CSS3, a jQuery fallback will be used instead.</p></li>
+<li><p><code>autoScrolling</code>: (default <code>true</code>) Defines whether to use the "automatic" scrolling or the "normal" one. It also has affects the way the sections fit in the browser/device window in tablets and mobile phones.</p></li>
+<li><p><code>fitToSection</code>: (default <code>true</code>). Determines whether or not to fit sections to the viewport or not. When set to <code>true</code> the current active section will always fill the whole viewport. Otherwise the user will be free to stop in the middle of a section (when )</p></li>
+<li><p><code>fitToSectionDelay</code>: (default 1000). If <code>fitToSection</code> is set to true, this delays<br>
+the fitting by the configured milliseconds.</p></li>
+<li><p><code>scrollBar</code>: (default <code>false</code>). Determines whether to use scrollbar for the site or not. In case of using scroll bar, the <code>autoScrolling</code> functionality will still working as expected. The user will also be free to scroll the site with the scroll bar and fullPage.js will fit the section in the screen when scrolling finishes.</p></li>
+<li><p><code>paddingTop</code>: (default <code>0</code>) Defines the top padding for each section with a numerical value and its measure (paddingTop: '10px', paddingTop: '10em'...) Useful in case of using a fixed header.</p></li>
+<li><p><code>paddingBottom</code>: (default <code>0</code>) Defines the bottom padding for each section with a numerical value and its measure (paddingBottom: '10px', paddingBottom: '10em'...). Useful in case of using a fixed footer.</p></li>
+<li><p><code>fixedElements</code>: (default <code>null</code>) Defines which elements will be taken off the scrolling structure of the plugin which is necessary when using the <code>css3</code> option to keep them fixed. It requires a string with the jQuery selectors for those elements. (For example: <code>fixedElements: '#element1, .element2'</code>)</p></li>
+<li><p><code>normalScrollElements</code>: (default <code>null</code>) If you want to avoid the auto scroll when scrolling over some elements, this is the option you need to use. (useful for maps, scrolling divs etc.) It requires a string with the jQuery selectors for those elements. (For example: <code>normalScrollElements: '#element1, .element2'</code>)</p></li>
+<li><p><code>normalScrollElementTouchThreshold</code> : (default <code>5</code>) Defines the threshold for the number of hops up the html node tree Fullpage will test to see if <code>normalScrollElements</code> is a match to allow scrolling functionality on divs on a touch device. (For example: <code>normalScrollElementTouchThreshold: 3</code>)</p></li>
+<li><p><code>keyboardScrolling</code>: (default <code>true</code>) Defines if the content can be navigated using the keyboard</p></li>
+<li><p><code>touchSensitivity</code>: (default <code>5</code>) Defines a percentage of the browsers window width/height, and how far a swipe must measure for navigating to the next section / slide</p></li>
+<li><p><code>continuousVertical</code>: (default <code>false</code>) Defines whether scrolling down in the last section should scroll down to the first one or not, and if scrolling up in the first section should scroll up to the last one or not. Not compatible with <code>loopTop</code> or <code>loopBottom</code>.</p></li>
+<li><p><code>animateAnchor</code>: (default <code>true</code>) Defines whether the load of the site when given an anchor (#) will scroll with animation to its destination or will directly load on the given section.</p></li>
+<li><p><code>recordHistory</code>: (default <code>true</code>) Defines whether to push the state of the site to the browser's history. When set to <code>true</code> each section/slide of the site will act as a new page and the back and forward buttons of the browser will scroll the sections/slides to reach the previous or next state of the site. When set to <code>false</code>, the URL will keep changing but will have no effect ont he browser's history. This option is automatically turned off when using <code>autoScrolling:false</code>.</p></li>
+<li><p><code>menu</code>: (default <code>false</code>) A selector can be used to specify the menu to link with the sections. This way the scrolling of the sections will activate the corresponding element in the menu using the class <code>active</code>.<br>
+This won't generate a menu but will just add the <code>active</code> class to the element in the given menu with the corresponding anchor links.<br>
+In order to link the elements of the menu with the sections, an HTML 5 data-tag (<code>data-menuanchor</code>) will be needed to use with the same anchor links as used within the sections. Example:</p></li>
+</ul>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">ul</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>myMenu<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">li</span> <span class="pl-e">data-menuanchor</span>=<span class="pl-s"><span class="pl-pds">"</span>firstPage<span class="pl-pds">"</span></span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>active<span class="pl-pds">"</span></span>&gt;&lt;<span class="pl-ent">a</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>#firstPage<span class="pl-pds">"</span></span>&gt;First section&lt;/<span class="pl-ent">a</span>&gt;&lt;/<span class="pl-ent">li</span>&gt;
+    &lt;<span class="pl-ent">li</span> <span class="pl-e">data-menuanchor</span>=<span class="pl-s"><span class="pl-pds">"</span>secondPage<span class="pl-pds">"</span></span>&gt;&lt;<span class="pl-ent">a</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>#secondPage<span class="pl-pds">"</span></span>&gt;Second section&lt;/<span class="pl-ent">a</span>&gt;&lt;/<span class="pl-ent">li</span>&gt;
+    &lt;<span class="pl-ent">li</span> <span class="pl-e">data-menuanchor</span>=<span class="pl-s"><span class="pl-pds">"</span>thirdPage<span class="pl-pds">"</span></span>&gt;&lt;<span class="pl-ent">a</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>#thirdPage<span class="pl-pds">"</span></span>&gt;Third section&lt;/<span class="pl-ent">a</span>&gt;&lt;/<span class="pl-ent">li</span>&gt;
+    &lt;<span class="pl-ent">li</span> <span class="pl-e">data-menuanchor</span>=<span class="pl-s"><span class="pl-pds">"</span>fourthPage<span class="pl-pds">"</span></span>&gt;&lt;<span class="pl-ent">a</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>#fourthPage<span class="pl-pds">"</span></span>&gt;Fourth section&lt;/<span class="pl-ent">a</span>&gt;&lt;/<span class="pl-ent">li</span>&gt;
+&lt;/<span class="pl-ent">ul</span>&gt;</pre></div>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">'</span>#fullpage<span class="pl-pds">'</span></span>).<span class="pl-en">fullpage</span>({
+    anchors<span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">'</span>firstPage<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>secondPage<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>thirdPage<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>fourthPage<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>lastPage<span class="pl-pds">'</span></span>],
+    menu<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>#myMenu<span class="pl-pds">'</span></span>
+});</pre></div>
+
+<p><strong>Note:</strong> the menu element should be placed outside the fullpage wrapper in order to avoid problem when using <code>css3:true</code>. Otherwise it will be appended to the <code>body</code> by the plugin itself.</p>
+
+<ul>
+<li><p><code>navigation</code>: (default <code>false</code>) If set to <code>true</code>, it will show a navigation bar made up of small circles.</p></li>
+<li><p><code>navigationPosition</code>: (default <code>none</code>) It can be set to <code>left</code> or <code>right</code> and defines which position the navigation bar will be shown (if using one).</p></li>
+<li><p><code>navigationTooltips</code>: (default []) Defines the tooltips to show for the navigation circles in case they are being used. Example: <code>navigationTooltips: ['firstSlide', 'secondSlide']</code>.</p></li>
+<li><p><code>showActiveTooltip</code>: (default <code>false</code>) Shows a persistent tooltip for the actively viewed section in the vertical navigation.</p></li>
+<li><p><code>slidesNavigation</code>: (default <code>false</code>) If set to <code>true</code> it will show a navigation bar made up of small circles for each landscape slider on the site.</p></li>
+<li><p><code>slidesNavPosition</code>: (default <code>bottom</code>) Defines the position for the landscape navigation bar for sliders. Admits <code>top</code> and <code>bottom</code> as values. You may want to modify the CSS styles to determine the distance from the top or bottom as well as any other style such as color.</p></li>
+<li><p><code>scrollOverflow</code>: (default <code>false</code>) defines whether or not to create a scroll for the section in case its content is bigger than the height of it. When set to <code>true</code>, your content will be wrapped by the plugin. Consider using delegation or load your other scripts in the <code>afterRender</code> callback.<br>
+In case of setting it to <code>true</code>, it requires the vendor plugin <a href="https://github.com/rochal/jQuery-slimScroll"><code>jquery.slimscroll.min</code></a> and it should be loaded before the fullPage.js plugin. For example:</p></li>
+</ul>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>vendors/jquery.slimscroll.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+&lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>jquery.fullPage.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+
+<ul>
+<li><p><code>sectionSelector</code>: (default <code>.section</code>) Defines the jQuery selector used for the plugin sections. It might need to be changed sometimes to avoid problem with other plugins using the same selectors as fullpage.js..</p></li>
+<li><p><code>slideSelector</code>: (default <code>.slide</code>)  Defines the jQuery selector used for the plugin slides.  It might need to be changed sometimes to avoid problem with other plugins using the same selectors as fullpage.js.</p></li>
+<li><p><code>responsiveWidth</code>: (default <code>0</code>)  A normal scroll (<code>autoScrolling:false</code>) will be used under the defined width in pixels. A class <code>fp-responsive</code> is added to the body tag in case the user wants to use it for his own responsive CSS. For example, if set to 900, whenever the browser's width is less than 900 the plugin will scroll like a normal site.</p></li>
+<li><p><code>responsiveHeight</code>: (default <code>0</code>)  A normal scroll (<code>autoScrolling:false</code>) will be used under the defined height in pixels. A class <code>fp-responsive</code> is added to the body tag in case the user wants to use it for his own responsive CSS. For example, if set to 900, whenever the browser's height is less than 900 the plugin will scroll like a normal site.</p></li>
+</ul>
+
+<h2>Methods</h2>
+
+<p>You can see them in action <a href="http://alvarotrigo.com/fullPage/examples/methods.html">here</a></p>
+
+<h3>moveSectionUp()</h3>
+
+<p><a href="http://codepen.io/alvarotrigo/pen/GJXNMN">Demo</a> Scrolls one section up:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">$</span>.<span class="pl-smi">fn</span>.<span class="pl-smi">fullpage</span>.<span class="pl-en">moveSectionUp</span>();</pre></div>
+
+<hr>
+
+<h3>moveSectionDown()</h3>
+
+<p><a href="http://codepen.io/alvarotrigo/pen/jPvVZx">Demo</a> Scrolls one section down:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">$</span>.<span class="pl-smi">fn</span>.<span class="pl-smi">fullpage</span>.<span class="pl-en">moveSectionDown</span>();</pre></div>
+
+<hr>
+
+<h3>moveTo(section, slide)</h3>
+
+<p><a href="http://codepen.io/alvarotrigo/pen/doqOmY">Demo</a> Scrolls the page to the given section and slide. The first slide, the visible one by default, will have index 0.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-c">/*Scrolling to the section with the anchor link `firstSlide` and to the 2nd Slide */</span>
+<span class="pl-smi">$</span>.<span class="pl-smi">fn</span>.<span class="pl-smi">fullpage</span>.<span class="pl-c1">moveTo</span>(<span class="pl-s"><span class="pl-pds">'</span>firstSlide<span class="pl-pds">'</span></span>, <span class="pl-c1">2</span>);
+</pre></div>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-c">//Scrolling to the 3rd section in the site</span>
+<span class="pl-smi">$</span>.<span class="pl-smi">fn</span>.<span class="pl-smi">fullpage</span>.<span class="pl-c1">moveTo</span>(<span class="pl-c1">3</span>, <span class="pl-c1">0</span>);
+
+<span class="pl-c">//Which is the same as</span>
+<span class="pl-smi">$</span>.<span class="pl-smi">fn</span>.<span class="pl-smi">fullpage</span>.<span class="pl-c1">moveTo</span>(<span class="pl-c1">3</span>);</pre></div>
+
+<hr>
+
+<h3>silentMoveTo(section, slide)</h3>
+
+<p><a href="http://codepen.io/alvarotrigo/pen/doqOeY">Demo</a><br>
+Exactly the same as <a href="https://github.com/alvarotrigo/fullPage.js#movetosection-slide"><code>moveTo</code></a> but in this case it performs the scroll without animation. A direct jump to the destination.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-c">/*Scrolling to the section with the anchor link `firstSlide` and to the 2nd Slide */</span>
+<span class="pl-smi">$</span>.<span class="pl-smi">fn</span>.<span class="pl-smi">fullpage</span>.<span class="pl-en">silentMoveTo</span>(<span class="pl-s"><span class="pl-pds">'</span>firstSlide<span class="pl-pds">'</span></span>, <span class="pl-c1">2</span>);</pre></div>
+
+<hr>
+
+<h3>moveSlideRight()</h3>
+
+<p><a href="http://codepen.io/alvarotrigo/pen/Wvgoyz">Demo</a><br>
+Scrolls the horizontal slider of the current section to the next slide:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">$</span>.<span class="pl-smi">fn</span>.<span class="pl-smi">fullpage</span>.<span class="pl-en">moveSlideRight</span>();</pre></div>
+
+<hr>
+
+<h3>moveSlideLeft()</h3>
+
+<p><a href="http://codepen.io/alvarotrigo/pen/gpdLjW">Demo</a><br>
+Scrolls the horizontal slider of the current section to the previous slide:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">$</span>.<span class="pl-smi">fn</span>.<span class="pl-smi">fullpage</span>.<span class="pl-en">moveSlideLeft</span>();</pre></div>
+
+<hr>
+
+<h3>setAutoScrolling(boolean)</h3>
+
+<p><a href="http://codepen.io/alvarotrigo/pen/rVZWrR">Demo</a> Sets the scrolling configuration in real time.<br>
+Defines the way the page scrolling behaves. If it is set to <code>true</code>, it will use the "automatic" scrolling, otherwise, it will use the "manual" or "normal" scrolling of the site. Be careful when combining this option with <code>scrollOverflow</code> set to true, as it might be difficult to scroll using the mouse wheel or the trackpad when the section is scrollable.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">$</span>.<span class="pl-smi">fn</span>.<span class="pl-smi">fullpage</span>.<span class="pl-en">setAutoScrolling</span>(<span class="pl-c1">false</span>);</pre></div>
+
+<hr>
+
+<h3>setFitToSection(boolean)</h3>
+
+<p><a href="http://codepen.io/alvarotrigo/pen/GJXNYm">Demo</a><br>
+Sets the value for the option <code>fitToSection</code> determining whether to fit the section in the screen or not.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">$</span>.<span class="pl-smi">fn</span>.<span class="pl-smi">fullpage</span>.<span class="pl-en">setFitToSection</span>(<span class="pl-c1">false</span>);</pre></div>
+
+<hr>
+
+<h3>setLockAnchors(boolean)</h3>
+
+<p><a href="http://codepen.io/alvarotrigo/pen/yNxVRQ">Demo</a><br>
+Sets the value for the option <code>lockAnchors</code> determining whether anchors will have any effect in the URL or not.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">$</span>.<span class="pl-smi">fn</span>.<span class="pl-smi">fullpage</span>.<span class="pl-en">setLockAnchors</span>(<span class="pl-c1">false</span>);</pre></div>
+
+<hr>
+
+<h3>setAllowScrolling(boolean, [directions])</h3>
+
+<p><a href="http://codepen.io/alvarotrigo/pen/EjeNdq">Demo</a> Adds or remove the possibility of scrolling through sections by using the mouse wheel/trackpad or touch gestures (which is active by default). Note this won't disable the keyboard scrolling. You<br>
+would need to use <code>setKeyboardScrolling</code> for it.</p>
+
+<ul>
+<li>
+<code>directions</code>: (optional parameter) Admitted values: <code>all</code>, <code>up</code>, <code>down</code>, <code>left</code>, <code>right</code> or a combination of them separated by commas like <code>down, right</code>. It defines the direction for which the scrolling will be enabled or disabled.</li>
+</ul>
+
+<div class="highlight highlight-source-js"><pre>
+<span class="pl-c">//disabling scrolling</span>
+<span class="pl-smi">$</span>.<span class="pl-smi">fn</span>.<span class="pl-smi">fullpage</span>.<span class="pl-en">setAllowScrolling</span>(<span class="pl-c1">false</span>);
+
+<span class="pl-c">//disabling scrolling down</span>
+<span class="pl-smi">$</span>.<span class="pl-smi">fn</span>.<span class="pl-smi">fullpage</span>.<span class="pl-en">setAllowScrolling</span>(<span class="pl-c1">false</span>, <span class="pl-s"><span class="pl-pds">'</span>down<span class="pl-pds">'</span></span>);
+
+<span class="pl-c">//disabling scrolling down and right</span>
+<span class="pl-smi">$</span>.<span class="pl-smi">fn</span>.<span class="pl-smi">fullpage</span>.<span class="pl-en">setAllowScrolling</span>(<span class="pl-c1">false</span>, <span class="pl-s"><span class="pl-pds">'</span>down, right<span class="pl-pds">'</span></span>);</pre></div>
+
+<hr>
+
+<h3>setKeyboardScrolling(boolean, [directions])</h3>
+
+<p><a href="http://codepen.io/alvarotrigo/pen/GJXNwm">Demo</a> Adds or remove the possibility of scrolling through sections by using the keyboard arrow keys (which is active by default).</p>
+
+<ul>
+<li>
+<code>directions</code>: (optional parameter) Admitted values: <code>all</code>, <code>up</code>, <code>down</code>, <code>left</code>, <code>right</code> or a combination of them separated by commas like <code>down, right</code>. It defines the direction for which the scrolling will be enabled or disabled.</li>
+</ul>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-c">//disabling all keyboard scrolling</span>
+<span class="pl-smi">$</span>.<span class="pl-smi">fn</span>.<span class="pl-smi">fullpage</span>.<span class="pl-en">setKeyboardScrolling</span>(<span class="pl-c1">false</span>);
+
+<span class="pl-c">//disabling keyboard scrolling down</span>
+<span class="pl-smi">$</span>.<span class="pl-smi">fn</span>.<span class="pl-smi">fullpage</span>.<span class="pl-en">setKeyboardScrolling</span>(<span class="pl-c1">false</span>, <span class="pl-s"><span class="pl-pds">'</span>down<span class="pl-pds">'</span></span>);
+
+<span class="pl-c">//disabling keyboard scrolling down and right</span>
+<span class="pl-smi">$</span>.<span class="pl-smi">fn</span>.<span class="pl-smi">fullpage</span>.<span class="pl-en">setKeyboardScrolling</span>(<span class="pl-c1">false</span>, <span class="pl-s"><span class="pl-pds">'</span>down, right<span class="pl-pds">'</span></span>);</pre></div>
+
+<hr>
+
+<h3>setRecordHistory(boolean)</h3>
+
+<p><a href="http://codepen.io/alvarotrigo/pen/rVZWQb">Demo</a> Defines whether to record the history for each hash change in the URL.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">$</span>.<span class="pl-smi">fn</span>.<span class="pl-smi">fullpage</span>.<span class="pl-en">setRecordHistory</span>(<span class="pl-c1">false</span>);</pre></div>
+
+<hr>
+
+<h3>setScrollingSpeed(milliseconds)</h3>
+
+<p><a href="http://codepen.io/alvarotrigo/pen/NqLbeY">Demo</a> Defines the scrolling speed in milliseconds.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">$</span>.<span class="pl-smi">fn</span>.<span class="pl-smi">fullpage</span>.<span class="pl-en">setScrollingSpeed</span>(<span class="pl-c1">700</span>);</pre></div>
+
+<hr>
+
+<h3>destroy(type)</h3>
+
+<p><a href="http://codepen.io/alvarotrigo/pen/bdxBzv">Demo</a> Destroys the plugin events and optionally its HTML markup and styles.<br>
+Ideal to use when using AJAX to load content. ()</p>
+
+<ul>
+<li>
+<code>type</code>: can be empty or <code>all</code>. If <code>all</code> is passed, the HTML markup and styles used by fullpage.js will be removed. This way the original HTML markup, the one used before any plugin modification is made, will be maintained.</li>
+</ul>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-c">//destroy any plugin event (scrolls, hashchange in the URL...)</span>
+<span class="pl-smi">$</span>.<span class="pl-smi">fn</span>.<span class="pl-smi">fullpage</span>.<span class="pl-en">destroy</span>();
+
+<span class="pl-c">//destroy any plugin event and any plugin modification done over your original HTML markup.</span>
+<span class="pl-smi">$</span>.<span class="pl-smi">fn</span>.<span class="pl-smi">fullpage</span>.<span class="pl-en">destroy</span>(<span class="pl-s"><span class="pl-pds">'</span>all<span class="pl-pds">'</span></span>);</pre></div>
+
+<hr>
+
+<h3>reBuild()</h3>
+
+<p>Updates the DOM structure to fit the new window size or its contents.<br>
+Ideal to use in combination with AJAX calls or external changes in the DOM structure of the site.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">$</span>.<span class="pl-smi">fn</span>.<span class="pl-smi">fullpage</span>.<span class="pl-en">reBuild</span>();</pre></div>
+
+<p>##Lazy Loading<br>
+<a href="http://codepen.io/alvarotrigo/pen/eNLBXo">Demo</a> fullPage.js provides a way to lazy load images, videos and audio elements so they won't slow down the loading of your site or unnecessarily waste data transfer.<br>
+When using lazy loading, all these elements will only get loaded when entering in the viewport.<br>
+To enable lazy loading all you need to do is change your <code>src</code> attribute to <code>data-src</code> as shown below:</p>
+
+<pre><code>&lt;img data-src="image.png"&gt;
+&lt;video&gt;
+    &lt;source data-src="video.webm" type="video/webm" /&gt;
+    &lt;source data-src="video.mp4" type="video/mp4" /&gt;
+&lt;/video&gt;
+</code></pre>
+
+<h2>Callbacks</h2>
+
+<p><a href="http://codepen.io/alvarotrigo/pen/XbPNQv">Demo</a> You can see them in action <a href="http://alvarotrigo.com/fullPage/examples/callbacks.html">here</a>.</p>
+
+<p>###afterLoad (<code>anchorLink</code>, <code>index</code>)<br>
+Callback fired once the sections have been loaded, after the scrolling has ended.<br>
+Parameters:</p>
+
+<ul>
+<li>
+<code>anchorLink</code>: anchorLink corresponding to the section.</li>
+<li>
+<code>index</code>: index of the section. Starting from 1.</li>
+</ul>
+
+<p>In case of not having anchorLinks defined in the plugin the <code>index</code> parameter would be the only one to use.</p>
+
+<p>Example:</p>
+
+<div class="highlight highlight-source-js"><pre>    <span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">'</span>#fullpage<span class="pl-pds">'</span></span>).<span class="pl-en">fullpage</span>({
+        anchors<span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">'</span>firstPage<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>secondPage<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>thirdPage<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>fourthPage<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>lastPage<span class="pl-pds">'</span></span>],
+
+        <span class="pl-en">afterLoad</span><span class="pl-k">:</span> <span class="pl-k">function</span>(<span class="pl-smi">anchorLink</span>, <span class="pl-smi">index</span>){
+            <span class="pl-k">var</span> loadedSection <span class="pl-k">=</span> <span class="pl-en">$</span>(<span class="pl-v">this</span>);
+
+            <span class="pl-c">//using index</span>
+            <span class="pl-k">if</span>(index <span class="pl-k">==</span> <span class="pl-c1">3</span>){
+                <span class="pl-c1">alert</span>(<span class="pl-s"><span class="pl-pds">"</span>Section 3 ended loading<span class="pl-pds">"</span></span>);
+            }
+
+            <span class="pl-c">//using anchorLink</span>
+            <span class="pl-k">if</span>(anchorLink <span class="pl-k">==</span> <span class="pl-s"><span class="pl-pds">'</span>secondSlide<span class="pl-pds">'</span></span>){
+                <span class="pl-c1">alert</span>(<span class="pl-s"><span class="pl-pds">"</span>Section 2 ended loading<span class="pl-pds">"</span></span>);
+            }
+        }
+    });</pre></div>
+
+<hr>
+
+<p>###onLeave (<code>index</code>, <code>nextIndex</code>, <code>direction</code>)<br>
+This callback is fired once the user leaves a section, in the transition to the new section.<br>
+Returning <code>false</code> will cancel the move before it takes place.</p>
+
+<p>Parameters:</p>
+
+<ul>
+<li>
+<code>index</code>: index of the leaving section. Starting from 1.</li>
+<li>
+<code>nextIndex</code>: index of the destination section. Starting from 1.</li>
+<li>
+<code>direction</code>: it will take the values <code>up</code> or <code>down</code> depending on the scrolling direction.</li>
+</ul>
+
+<p>Example:</p>
+
+<div class="highlight highlight-source-js"><pre>    <span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">'</span>#fullpage<span class="pl-pds">'</span></span>).<span class="pl-en">fullpage</span>({
+        <span class="pl-en">onLeave</span><span class="pl-k">:</span> <span class="pl-k">function</span>(<span class="pl-smi">index</span>, <span class="pl-smi">nextIndex</span>, <span class="pl-smi">direction</span>){
+            <span class="pl-k">var</span> leavingSection <span class="pl-k">=</span> <span class="pl-en">$</span>(<span class="pl-v">this</span>);
+
+            <span class="pl-c">//after leaving section 2</span>
+            <span class="pl-k">if</span>(index <span class="pl-k">==</span> <span class="pl-c1">2</span> <span class="pl-k">&amp;&amp;</span> direction <span class="pl-k">==</span><span class="pl-s"><span class="pl-pds">'</span>down<span class="pl-pds">'</span></span>){
+                <span class="pl-c1">alert</span>(<span class="pl-s"><span class="pl-pds">"</span>Going to section 3!<span class="pl-pds">"</span></span>);
+            }
+
+            <span class="pl-k">else</span> <span class="pl-k">if</span>(index <span class="pl-k">==</span> <span class="pl-c1">2</span> <span class="pl-k">&amp;&amp;</span> direction <span class="pl-k">==</span> <span class="pl-s"><span class="pl-pds">'</span>up<span class="pl-pds">'</span></span>){
+                <span class="pl-c1">alert</span>(<span class="pl-s"><span class="pl-pds">"</span>Going to section 1!<span class="pl-pds">"</span></span>);
+            }
+        }
+    });</pre></div>
+
+<p>####Cancelling the scroll before it takes place<br>
+You can cancel the scroll by returning <code>false</code> on the <code>onLeave</code> callback:</p>
+
+<div class="highlight highlight-source-js"><pre>    <span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">'</span>#fullpage<span class="pl-pds">'</span></span>).<span class="pl-en">fullpage</span>({
+        <span class="pl-en">onLeave</span><span class="pl-k">:</span> <span class="pl-k">function</span>(<span class="pl-smi">index</span>, <span class="pl-smi">nextIndex</span>, <span class="pl-smi">direction</span>){
+            <span class="pl-c">//it won't scroll if the destination is the 3rd section</span>
+            <span class="pl-k">if</span>(nextIndex <span class="pl-k">==</span> <span class="pl-c1">3</span>){
+                <span class="pl-k">return</span> <span class="pl-c1">false</span>;
+            }
+        }
+    });</pre></div>
+
+<hr>
+
+<p>###afterRender()<br>
+This callback is fired just after the structure of the page is generated. This is the callback you want to use to initialize other plugins or fire any code which requires the document to be ready (as this plugin modifies the DOM to create the resulting structure).</p>
+
+<p>Example:</p>
+
+<div class="highlight highlight-source-js"><pre>    <span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">'</span>#fullpage<span class="pl-pds">'</span></span>).<span class="pl-en">fullpage</span>({
+        <span class="pl-en">afterRender</span><span class="pl-k">:</span> <span class="pl-k">function</span>(){
+            <span class="pl-k">var</span> pluginContainer <span class="pl-k">=</span> <span class="pl-en">$</span>(<span class="pl-v">this</span>);
+            <span class="pl-c1">alert</span>(<span class="pl-s"><span class="pl-pds">"</span>The resulting DOM structure is ready<span class="pl-pds">"</span></span>);
+        }
+    });</pre></div>
+
+<hr>
+
+<p>###afterResize()<br>
+This callback is fired after resizing the browser's window. Just after the sections are resized.</p>
+
+<p>Example:</p>
+
+<div class="highlight highlight-source-js"><pre>    <span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">'</span>#fullpage<span class="pl-pds">'</span></span>).<span class="pl-en">fullpage</span>({
+        <span class="pl-en">afterResize</span><span class="pl-k">:</span> <span class="pl-k">function</span>(){
+            <span class="pl-k">var</span> pluginContainer <span class="pl-k">=</span> <span class="pl-en">$</span>(<span class="pl-v">this</span>);
+            <span class="pl-c1">alert</span>(<span class="pl-s"><span class="pl-pds">"</span>The sections have finished resizing<span class="pl-pds">"</span></span>);
+        }
+    });</pre></div>
+
+<hr>
+
+<p>###afterSlideLoad (<code>anchorLink</code>, <code>index</code>, <code>slideAnchor</code>, <code>slideIndex</code>)<br>
+Callback fired once the slide of a section have been loaded, after the scrolling has ended.<br>
+Parameters:</p>
+
+<ul>
+<li>
+<code>anchorLink</code>: anchorLink corresponding to the section.</li>
+<li>
+<code>index</code>: index of the section. Starting from 1.</li>
+<li>
+<code>slideAnchor</code>: anchor corresponding to the slide (in case there is)</li>
+<li>
+<code>slideIndex</code>: index of the slide. Starting from 1. (the default slide doesn't count as slide, but as a section)</li>
+</ul>
+
+<p>In case of not having anchorLinks defined for the slide or slides the <code>slideIndex</code> parameter would be the only one to use.<br>
+Example:</p>
+
+<div class="highlight highlight-source-js"><pre>    <span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">'</span>#fullpage<span class="pl-pds">'</span></span>).<span class="pl-en">fullpage</span>({
+        anchors<span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">'</span>firstPage<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>secondPage<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>thirdPage<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>fourthPage<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>lastPage<span class="pl-pds">'</span></span>],
+
+        <span class="pl-en">afterSlideLoad</span><span class="pl-k">:</span> <span class="pl-k">function</span>( <span class="pl-smi">anchorLink</span>, <span class="pl-smi">index</span>, <span class="pl-smi">slideAnchor</span>, <span class="pl-smi">slideIndex</span>){
+            <span class="pl-k">var</span> loadedSlide <span class="pl-k">=</span> <span class="pl-en">$</span>(<span class="pl-v">this</span>);
+
+            <span class="pl-c">//first slide of the second section</span>
+            <span class="pl-k">if</span>(anchorLink <span class="pl-k">==</span> <span class="pl-s"><span class="pl-pds">'</span>secondPage<span class="pl-pds">'</span></span> <span class="pl-k">&amp;&amp;</span> slideIndex <span class="pl-k">==</span> <span class="pl-c1">1</span>){
+                <span class="pl-c1">alert</span>(<span class="pl-s"><span class="pl-pds">"</span>First slide loaded<span class="pl-pds">"</span></span>);
+            }
+
+            <span class="pl-c">//second slide of the second section (supposing #secondSlide is the</span>
+            <span class="pl-c">//anchor for the second slide</span>
+            <span class="pl-k">if</span>(index <span class="pl-k">==</span> <span class="pl-c1">2</span> <span class="pl-k">&amp;&amp;</span> slideIndex <span class="pl-k">==</span> <span class="pl-s"><span class="pl-pds">'</span>secondSlide<span class="pl-pds">'</span></span>){
+                <span class="pl-c1">alert</span>(<span class="pl-s"><span class="pl-pds">"</span>Second slide loaded<span class="pl-pds">"</span></span>);
+            }
+        }
+    });</pre></div>
+
+<hr>
+
+<p>###onSlideLeave (<code>anchorLink</code>, <code>index</code>, <code>slideIndex</code>, <code>direction</code>, <code>nextSlideIndex</code>)<br>
+This callback is fired once the user leaves an slide to go to another, in the transition to the new slide.<br>
+Returning <code>false</code> will cancel the move before it takes place.</p>
+
+<p>Parameters:</p>
+
+<ul>
+<li>
+<code>anchorLink</code>: anchorLink corresponding to the section.</li>
+<li>
+<code>index</code>: index of the section. Starting from 1.</li>
+<li>
+<code>slideIndex</code>: index of the slide. <strong>Starting from 0.</strong>
+</li>
+<li>
+<code>direction</code>: takes the values <code>right</code> or <code>left</code> depending on the scrolling direction.</li>
+<li>
+<code>nextSlideIndex</code>: index of the destination slide. <strong>Starting from 0.</strong>
+</li>
+</ul>
+
+<p>Example:</p>
+
+<div class="highlight highlight-source-js"><pre>    <span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">'</span>#fullpage<span class="pl-pds">'</span></span>).<span class="pl-en">fullpage</span>({
+        <span class="pl-en">onSlideLeave</span><span class="pl-k">:</span> <span class="pl-k">function</span>( <span class="pl-smi">anchorLink</span>, <span class="pl-smi">index</span>, <span class="pl-smi">slideIndex</span>, <span class="pl-smi">direction</span>, <span class="pl-smi">nextSlideIndex</span>){
+            <span class="pl-k">var</span> leavingSlide <span class="pl-k">=</span> <span class="pl-en">$</span>(<span class="pl-v">this</span>);
+
+            <span class="pl-c">//leaving the first slide of the 2nd Section to the right</span>
+            <span class="pl-k">if</span>(index <span class="pl-k">==</span> <span class="pl-c1">2</span> <span class="pl-k">&amp;&amp;</span> slideIndex <span class="pl-k">==</span> <span class="pl-c1">0</span> <span class="pl-k">&amp;&amp;</span> direction <span class="pl-k">==</span> <span class="pl-s"><span class="pl-pds">'</span>right<span class="pl-pds">'</span></span>){
+                <span class="pl-c1">alert</span>(<span class="pl-s"><span class="pl-pds">"</span>Leaving the fist slide!!<span class="pl-pds">"</span></span>);
+            }
+
+            <span class="pl-c">//leaving the 3rd slide of the 2nd Section to the left</span>
+            <span class="pl-k">if</span>(index <span class="pl-k">==</span> <span class="pl-c1">2</span> <span class="pl-k">&amp;&amp;</span> slideIndex <span class="pl-k">==</span> <span class="pl-c1">2</span> <span class="pl-k">&amp;&amp;</span> direction <span class="pl-k">==</span> <span class="pl-s"><span class="pl-pds">'</span>left<span class="pl-pds">'</span></span>){
+                <span class="pl-c1">alert</span>(<span class="pl-s"><span class="pl-pds">"</span>Going to slide 2! <span class="pl-pds">"</span></span>);
+            }
+        }
+    });</pre></div>
+
+<p>####Cancelling a move before it takes place<br>
+You can cancel a move by returning <code>false</code> on the <code>onSlideLeave</code> callback. Same as with <code>onLeave</code>.</p>
+
+<p>#Build tasks<br>
+This gives the ability to compile the SCSS file to CSS as well compress and generate source-maps for the CSS and JS files.</p>
+
+<p>##Installing dependencies<br>
+You must have <code>node</code> amd <code>npm</code> installed in order to run the compile and compress tasks.</p>
+
+<p>Terminal:</p>
+
+<pre><code>// (Optional) Install Gulp module globally
+npm install gulp -g
+
+// Install fullpage's build dependencies
+npm install
+</code></pre>
+
+<p>##Task commands</p>
+
+<p>Terminal:</p>
+
+<pre><code>// Only compile the SCSS
+gulp scss
+
+// Only compress the CSS
+gulp css
+
+// Only compress the JS
+gulp js
+
+// Runs the css and js tasks (not the scss)
+gulp
+</code></pre>
+
+<p>#Resources</p>
+
+<ul>
+<li><a href="https://goo.gl/HuFudq">Wordpress theme</a></li>
+<li>
+<a href="http://matthewlein.com/ceaser/">CSS Easing Animation Tool - Matthew Lein</a> (useful to define the <code>easingcss3</code> value)</li>
+<li><a href="http://www.jsdelivr.com/#!jquery.fullpage">fullPage.js jsDelivr CDN</a></li>
+<li><a href="http://octobercms.com/plugin/freestream-parallax">fullPage.js plugin for October CMS</a></li>
+<li><a href="https://wordpress.org/plugins/wp-fullpage/">fullPage.js wordpress plugin</a></li>
+<li><a href="http://premium.wpmudev.org/blog/build-apple-inspired-full-page-scrolling-pages-for-your-wordpress-site/">Integrating fullPage.js with Wordpress (Tutorial)</a></li>
+</ul>
+
+<h2>Who is using fullPage.js</h2>
+
+<p>If you want your page to be listed here. Please <a href="mailto:alvaro@alvarotrigo.com">contact me</a> with the URL.</p>
+
+<p><a href="http://www.yourprimer.com/"><img src="https://camo.githubusercontent.com/ea3c25600230c79d6fe82458d500348d09227484/687474703a2f2f77616c6c7061706572732d666f722d697061642e636f6d2f66756c6c706167652f696d6773332f6c6f676f732f676f6f676c652e706e67" alt="Google" data-canonical-src="http://wallpapers-for-ipad.com/fullpage/imgs3/logos/google.png" style="max-width:100%;"></a><br>
+<a href="http://www.sony-asia.com/microsite/mdr-10/"><img src="https://camo.githubusercontent.com/d59409930c93bb1f072ba2360fc2bfbf0e262211/687474703a2f2f77616c6c7061706572732d666f722d697061642e636f6d2f66756c6c706167652f696d6773332f6c6f676f732f736f6e792e676966" alt="Sony" data-canonical-src="http://wallpapers-for-ipad.com/fullpage/imgs3/logos/sony.gif" style="max-width:100%;"></a><br>
+<a href="https://camo.githubusercontent.com/21c498aa6cfc4cc63fb499f8a86e89c5eab3d735/687474703a2f2f77616c6c7061706572732d666f722d697061642e636f6d2f66756c6c706167652f696d6773332f6c6f676f732f766f6461666f6e652e706e67" target="_blank"><img src="https://camo.githubusercontent.com/21c498aa6cfc4cc63fb499f8a86e89c5eab3d735/687474703a2f2f77616c6c7061706572732d666f722d697061642e636f6d2f66756c6c706167652f696d6773332f6c6f676f732f766f6461666f6e652e706e67" alt="Vodafone" data-canonical-src="http://wallpapers-for-ipad.com/fullpage/imgs3/logos/vodafone.png" style="max-width:100%;"></a><br>
+<a href="http://www.britishairways.com/en-gb/information/travel-classes/experience-our-cabins"><img src="https://camo.githubusercontent.com/0d60ef8451b319310526ada45c8fc0e39596b38b/687474703a2f2f77616c6c7061706572732d666f722d697061642e636f6d2f66756c6c706167652f696d6773332f6c6f676f732f627269746973682d616972776179732d66756c6c706167652e676966" alt="British Airways" data-canonical-src="http://wallpapers-for-ipad.com/fullpage/imgs3/logos/british-airways-fullpage.gif" style="max-width:100%;"></a><br>
+<a href="http://www.battlefield.com/"><img src="https://camo.githubusercontent.com/e8f04d062509afbf0d2f57096850c05dc8351984/687474703a2f2f77616c6c7061706572732d666f722d697061642e636f6d2f66756c6c706167652f696d6773332f6c6f676f732f65612e706e67" alt="EA" data-canonical-src="http://wallpapers-for-ipad.com/fullpage/imgs3/logos/ea.png" style="max-width:100%;"></a><br>
+<a href="http://www.mi.com/shouhuan"><img src="https://camo.githubusercontent.com/a7c04b4a31a5a688116d0b4f9320058f7d5df7e0/687474703a2f2f77616c6c7061706572732d666f722d697061642e636f6d2f66756c6c706167652f696d6773332f6c6f676f732f6d692e706e67" alt="Mi" data-canonical-src="http://wallpapers-for-ipad.com/fullpage/imgs3/logos/mi.png" style="max-width:100%;"></a><br>
+<a href="http://usescribe.com/"><img src="https://camo.githubusercontent.com/17a19de7afa59d82abbb42a3bd55b92d602fbe4d/687474703a2f2f77616c6c7061706572732d666f722d697061642e636f6d2f66756c6c706167652f696d6773332f6c6f676f732f7363726962652e706e67" alt="scribe" data-canonical-src="http://wallpapers-for-ipad.com/fullpage/imgs3/logos/scribe.png" style="max-width:100%;"></a><br>
+<a href="http://www.matrimonia.rs/"><img src="https://camo.githubusercontent.com/5cec8c5630923e9483db75d216227c5b8ab31668/687474703a2f2f77616c6c7061706572732d666f722d697061642e636f6d2f66756c6c706167652f696d6773332f6c6f676f732f6d617472696d6f6e69612e706e67" alt="matrimonia" data-canonical-src="http://wallpapers-for-ipad.com/fullpage/imgs3/logos/matrimonia.png" style="max-width:100%;"></a><br>
+<a href="http://www.getredd.com/"><img src="https://camo.githubusercontent.com/8be5a835f5a1b72adca990699d7f5723af65891c/687474703a2f2f77616c6c7061706572732d666f722d697061642e636f6d2f66756c6c706167652f696d6773332f6c6f676f732f726564642e706e67" alt="redd" data-canonical-src="http://wallpapers-for-ipad.com/fullpage/imgs3/logos/redd.png" style="max-width:100%;"></a><br>
+<a href="http://www.sanyang.com.tw/service/Conception/"><img src="https://camo.githubusercontent.com/c6e03ed3f7c2aeadc156a453d954ff5991d7a755/687474703a2f2f77616c6c7061706572732d666f722d697061642e636f6d2f66756c6c706167652f696d6773332f6c6f676f732f73796d2e706e67" alt="redd" data-canonical-src="http://wallpapers-for-ipad.com/fullpage/imgs3/logos/sym.png" style="max-width:100%;"></a></p>
+
+<ul>
+<li><a href="http://www.britishairways.com/en-gb/information/travel-classes/experience-our-cabins">http://www.britishairways.com/en-gb/information/travel-classes/experience-our-cabins</a></li>
+<li><a href="http://www.sony-asia.com/microsite/mdr-10/">http://www.sony-asia.com/microsite/mdr-10/</a></li>
+<li><a href="http://www.yourprimer.com/">http://www.yourprimer.com/</a></li>
+<li><a href="http://burntmovie.com/">http://burntmovie.com/</a></li>
+<li><a href="http://essenso.com/">http://essenso.com/</a></li>
+<li><a href="http://www.battlefield.com/">http://www.battlefield.com/</a></li>
+<li><a href="http://www.kibey.com/">http://www.kibey.com/</a></li>
+<li><a href="http://www.newjumoconcept.com/">http://www.newjumoconcept.com/</a></li>
+<li><a href="http://www.shootinggalleryasia.com/">http://www.shootinggalleryasia.com/</a></li>
+<li><a href="http://medoff.ua/en/">http://medoff.ua/en/</a></li>
+<li><a href="http://promo.prestigio.com/grace1/">http://promo.prestigio.com/grace1/</a></li>
+<li><a href="http://www.mi.com/shouhuan">http://www.mi.com/shouhuan</a></li>
+<li><a href="https://moneytree.jp/">https://moneytree.jp/</a></li>
+<li><a href="http://torchbrowser.com/">http://torchbrowser.com/</a></li>
+<li><a href="http://thekorner.fr/">http://thekorner.fr/</a></li>
+<li><a href="http://www.restaurantwoods.nl/">http://www.restaurantwoods.nl/</a></li>
+<li><a href="http://urban-walks.com/">http://urban-walks.com/</a></li>
+<li><a href="http://lingualeo.com/">http://lingualeo.com/</a></li>
+<li><a href="http://charlotteaimes.com/">http://charlotteaimes.com/</a></li>
+<li><a href="http://collection.madeofsundays.com">http://collection.madeofsundays.com</a></li>
+<li><a href="http://thiswasmybest.com/">http://thiswasmybest.com/</a></li>
+<li><a href="http://www.boxreload.com/">http://www.boxreload.com/</a></li>
+<li><a href="http://www.thespecialists.be">http://www.thespecialists.be</a></li>
+<li><a href="http://brianingle.webflow.com/">http://brianingle.webflow.com/</a></li>
+<li><a href="http://lawinenstift.com/">http://lawinenstift.com/</a></li>
+<li><a href="http://www.swenk.me/">http://www.swenk.me/</a></li>
+<li><a href="http://duis.co/">http://duis.co/</a></li>
+<li><a href="http://educationaboveall.org/">http://educationaboveall.org/</a></li>
+<li><a href="http://camfindapp.com/">http://camfindapp.com/</a></li>
+<li><a href="http://bnacademy.com.au/">http://bnacademy.com.au/</a></li>
+<li><a href="http://rockercreative.com/">http://rockercreative.com/</a></li>
+<li><a href="http://wantnova.com/">http://wantnova.com/</a></li>
+<li><a href="http://usescribe.com/">http://usescribe.com/</a></li>
+<li><a href="http://lucilecazanave.com/">http://lucilecazanave.com/</a></li>
+<li><a href="http://boxx.hk/">http://boxx.hk/</a></li>
+<li><a href="http://medlive.com">http://medlive.com</a></li>
+<li><a href="http://bearonunicycle.com/">http://bearonunicycle.com/</a></li>
+<li><a href="http://rawmilk.dk/en/">http://rawmilk.dk/en/</a></li>
+<li><a href="http://www.famavolat.com/">http://www.famavolat.com/</a></li>
+<li><a href="http://www.carpetloverclub.com/">http://www.carpetloverclub.com/</a></li>
+<li><a href="http://www.sanyang.com.tw/service/Conception/">http://www.sanyang.com.tw/service/Conception/</a></li>
+<li><a href="http://www.batzaya.net/">http://www.batzaya.net/</a></li>
+<li><a href="http://www.graphicid.dk/">http://www.graphicid.dk/</a></li>
+<li><a href="http://www.jukstapoz.com/">http://www.jukstapoz.com/</a></li>
+<li><a href="http://portfolio.io.utwente.nl/student/dijkavan/">http://portfolio.io.utwente.nl/student/dijkavan/</a></li>
+<li><a href="http://www.carlphot.com/">http://www.carlphot.com/</a></li>
+<li><a href="http://medissix.com/">http://medissix.com/</a></li>
+<li><a href="http://trasmissione-energia.terna.it/">http://trasmissione-energia.terna.it/</a></li>
+<li><a href="http://www.thefoodmovie.com/">http://www.thefoodmovie.com/</a></li>
+<li><a href="http://www.villareginateodolinda.it">http://www.villareginateodolinda.it</a></li>
+<li><a href="http://www.kesstrio.com">http://www.kesstrio.com</a></li>
+<li><a href="http://www.karmaffne.com/">http://www.karmaffne.com/</a></li>
+<li><a href="http://fossdistillery.is">http://fossdistillery.is</a></li>
+<li><a href="http://www.conversionculture.com/">http://www.conversionculture.com/</a></li>
+<li><a href="http://ded-morozz.kiev.ua/">http://ded-morozz.kiev.ua/</a></li>
+<li><a href="http://www.fergalkeenan.com">http://www.fergalkeenan.com</a></li>
+<li><a href="http://yizeng.me/">http://yizeng.me/</a></li>
+<li><a href="http://neolearning.eu/">http://neolearning.eu/</a></li>
+<li><a href="http://unabridgedsoftware.com/">http://unabridgedsoftware.com/</a></li>
+<li><a href="http://wc2014.plnwrx.com/">http://wc2014.plnwrx.com/</a></li>
+<li><a href="http://organice.io/">http://organice.io/</a></li>
+<li><a href="http://atlanticcorp.us/">http://atlanticcorp.us/</a></li>
+<li><a href="http://moysport.ru/">http://moysport.ru/</a></li>
+<li><a href="http://wcfixtures.co.uk/">http://wcfixtures.co.uk/</a></li>
+<li><a href="http://www.dopehustleinc.com/default.php">http://www.dopehustleinc.com/default.php</a></li>
+<li><a href="http://themify.me/demo/#theme=fullpane">http://themify.me/demo/#theme=fullpane</a></li>
+<li><a href="http://dancingroad.com">http://dancingroad.com</a></li>
+<li><a href="http://www.camanihome.com/">http://www.camanihome.com/</a></li>
+<li><a href="http://www.exapoint.ch/">http://www.exapoint.ch/</a></li>
+<li><a href="https://life2film.com/en/">https://life2film.com/en/</a></li>
+<li><a href="http://www.altamirarecovery.com/shame/">http://www.altamirarecovery.com/shame/</a></li>
+</ul>
+
+<p>You can find another list <a href="http://libscore.com/#%24.fn.fullpage">here</a>.</p>
+
+<h2>Donations</h2>
+
+<p>Donations would be more than welcome :)</p>
+
+<p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=BEK5JQCQMED4J&amp;lc=GB&amp;item_name=fullPage%2ejs&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"><img src="https://camo.githubusercontent.com/24ae43518013d5c9306ddadbbc2fdea234d3522c/68747470733a2f2f7777772e70617970616c6f626a656374732e636f6d2f656e5f55532f47422f692f62746e2f62746e5f646f6e61746543435f4c472e676966" alt="Donate" data-canonical-src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif" style="max-width:100%;"></a></p>
+
+<h2>License</h2>
+
+<p>(The MIT License)</p>
+
+<p>Copyright (c) 2013 Alvaro Trigo &lt;<a href="mailto:alvaro@alvarotrigo.com">alvaro@alvarotrigo.com</a>&gt;</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining<br>
+a copy of this software and associated documentation files (the<br>
+'Software'), to deal in the Software without restriction, including<br>
+without limitation the rights to use, copy, modify, merge, publish,<br>
+distribute, sublicense, and/or sell copies of the Software, and to<br>
+permit persons to whom the Software is furnished to do so, subject to<br>
+the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be<br>
+included in all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,<br>
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF<br>
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.<br>
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY<br>
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,<br>
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE<br>
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

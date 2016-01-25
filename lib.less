@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+.mp() {
+    margin: 0;
+    padding: 0;
+}
+
+.fl() {
+    float: left;
+}
+
+.fr() {
+    float: right;
+}
+
+.pa() {
+    position: absolute;
+}
+
+.pr() {
+    position: relative;
+}
+
+.pf() {
+    position: fixed;
+}
+
+.fontS(@size) {
+    font-size: @size;
+}
+
+.fontFm(@family) {
+    font-family: @family;
+}
+
+.fontFc(@family, @url, @type) {
+    @font-face {
+        font-family: @family;
+        src: url(@url) format(@type);
+    }
+}
+
+.color(@color) {
+    color: @color;
+}
+
+.textA(@align: center) {
+    text-align: @align;
+}
+
+.lineH(@lh) {
+    line-height: @lh;
+}
+
+.textS(@horizontal: 1px, @vertical: 1px, @blur: 0, @color: gray) {
+    text-shadow: @horizontal @vertical @blur @color;
+}
+
+.borderR(@radius) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.boxSd(@horizontal: 1px, @vertical: 1px, @blur: 0, @color: gray) {
+    -webkit-box-shadow: @horizontal @vertical @blur @color;
+    -moz-box-shadow: @horizontal @vertical @blur @color;
+    box-shadow: @horizontal @vertical @blur @color;
+}
+
+.boxSz(@box: content-box) {
+    -webkit-box-sizing: @box;
+    -moz-box-sizing: @box;
+    box-sizing: @box;
+}
+
